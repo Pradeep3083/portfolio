@@ -31,6 +31,7 @@
             padding: 10px 5%;
             background-color: #252565;
             z-index: 1000;
+            height: 80px; /* Make sure to set a fixed height for consistency */
         }
 
         nav .left {
@@ -58,7 +59,7 @@
 
         /* Adding margin-top to avoid overlap with fixed nav */
         main {
-            padding: 80px 5%;
+            padding: 80px 5%; /* Increased padding to prevent content from hiding behind the nav */
         }
 
         .firstSection {
@@ -69,7 +70,7 @@
         }
 
         .leftSection {
-            width: 100%;
+            width: 50%;
         }
 
         .leftSection h1 {
@@ -80,28 +81,25 @@
             color: #aa6be4;
         }
 
+        /* Section scroll offset to avoid headings being covered by the navbar */
+        section {
+            scroll-margin-top: 80px; /* Adjust this value based on the nav height */
+        }
+
         .section-title {
             color: #9999e2;
             margin-bottom: 20px;
         }
 
-        .experience,
-        .education,
-        .projects,
-        .skills {
+        .experience, .education, .projects, .skills {
             margin-bottom: 50px;
         }
 
-        .education-item,
-        .experience-item,
-        .project-item,
-        .skill-item {
+        .education-item, .experience-item, .project-item, .skill-item {
             margin-bottom: 20px;
         }
 
-        .education-item span,
-        .experience-item span,
-        .skill-item span {
+        .education-item span, .experience-item span, .skill-item span {
             display: block;
             color: gray;
         }
@@ -123,12 +121,10 @@
             color: white;
         }
 
-        /* Line to separate sections */
-        hr {
-            border: 0;
-            height: 1px;
-            background: #9999e2;
-            margin: 50px 0;
+        /* Optional: Add line separators between sections */
+        section + section {
+            border-top: 1px solid #9999e2;
+            padding-top: 40px;
         }
     </style>
 </head>
@@ -151,13 +147,9 @@
         <section id="about" class="firstSection">
             <div class="leftSection">
                 <h1>Hi, I’m <span class="highlight">Pradeep Sai Lakshman</span></h1>
-                <p>I am currently pursuing my Bachelor of Technology in Electronics and Communication Engineering at
-                    Prasad V. Potluri Siddhartha Institute of Technology. I’m passionate about technology and always
-                    eager to learn and grow both personally and professionally.</p>
+                <p>I am currently pursuing my Bachelor of Technology in Electronics and Communication Engineering at Prasad V. Potluri Siddhartha Institute of Technology. I’m passionate about technology and always eager to learn and grow both personally and professionally.</p>
             </div>
         </section>
-
-        <hr>
 
         <section id="experience">
             <h2 class="section-title">Work Experience</h2>
@@ -183,8 +175,6 @@
             </div>
         </section>
 
-        <hr>
-
         <section id="education">
             <h2 class="section-title">Education</h2>
             <div class="education">
@@ -206,25 +196,19 @@
             </div>
         </section>
 
-        <hr>
-
         <section id="projects">
             <h2 class="section-title">Projects</h2>
             <div class="projects">
                 <div class="project-item">
                     <h3>Name Printing on 7-Segment Display Using Basys3 FPGA Board</h3>
-                    <p>Developed a hardware project to display names on a 7-segment display using Verilog HDL on the
-                        Basys3 FPGA board.</p>
+                    <p>Developed a hardware project to display names on a 7-segment display using Verilog HDL on the Basys3 FPGA board.</p>
                 </div>
                 <div class="project-item">
                     <h3>Creating Digital Clock Using Basys3 FPGA Board</h3>
-                    <p>Implemented a digital clock with real-time display using Verilog HDL on the Basys3 FPGA board.
-                    </p>
+                    <p>Implemented a digital clock with real-time display using Verilog HDL on the Basys3 FPGA board.</p>
                 </div>
             </div>
         </section>
-
-        <hr>
 
         <section id="skills">
             <h2 class="section-title">Skills</h2>
@@ -244,8 +228,6 @@
             </div>
         </section>
 
-        <hr>
-
         <section id="contact">
             <h2 class="section-title">Contact Me</h2>
             <p>Email: <a href="mailto:pradeepsailakshman.guni@gmail.com">pradeepsailakshman.guni@gmail.com</a></p>
@@ -255,8 +237,7 @@
 
     <footer>
         <p>&copy; 2024 Pradeep Sai Lakshman. All rights reserved.</p>
-        <p>Connect with me on <a href="https://www.linkedin.com/in/pradeep-sai-lakshman-guniganti"
-                target="_blank">LinkedIn</a></p>
+        <p>Connect with me on <a href="https://www.linkedin.com/in/pradeep-sai-lakshman-guniganti" target="_blank">LinkedIn</a></p>
     </footer>
 </body>
 
