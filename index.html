@@ -31,7 +31,7 @@
             padding: 10px 5%;
             background-color: #252565;
             z-index: 1000;
-            height: 80px; /* Make sure to set a fixed height for consistency */
+            height: 80px;
         }
 
         nav .left {
@@ -57,20 +57,19 @@
             color: #9999e2;
         }
 
-        /* Adding margin-top to avoid overlap with fixed nav */
+        /* Adjusting main content to avoid overlap with fixed nav */
         main {
-            padding: 80px 5%; /* Increased padding to prevent content from hiding behind the nav */
+            padding: 80px 5%;
         }
 
+        /* Remove flex display since we don't need side-by-side alignment */
         .firstSection {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             margin-bottom: 60px;
         }
 
         .leftSection {
-            width: 50%;
+            /* Remove width restriction */
+            /* width: 50%; */
         }
 
         .leftSection h1 {
@@ -83,7 +82,7 @@
 
         /* Section scroll offset to avoid headings being covered by the navbar */
         section {
-            scroll-margin-top: 80px; /* Adjust this value based on the nav height */
+            scroll-margin-top: 80px;
         }
 
         .section-title {
@@ -91,15 +90,23 @@
             margin-bottom: 20px;
         }
 
-        .experience, .education, .projects, .skills {
+        .experience,
+        .education,
+        .projects,
+        .skills {
             margin-bottom: 50px;
         }
 
-        .education-item, .experience-item, .project-item, .skill-item {
+        .education-item,
+        .experience-item,
+        .project-item,
+        .skill-item {
             margin-bottom: 20px;
         }
 
-        .education-item span, .experience-item span, .skill-item span {
+        .education-item span,
+        .experience-item span,
+        .skill-item span {
             display: block;
             color: gray;
         }
@@ -122,7 +129,7 @@
         }
 
         /* Optional: Add line separators between sections */
-        section + section {
+        section+section {
             border-top: 1px solid #9999e2;
             padding-top: 40px;
         }
