@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pradeep Sai Lakshman - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000021;
+            color: white;
+            font-family: monospace;
+            line-height: 1.6;
+        }
+
+        /* Fixing the navigation bar at the top */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5%;
+            background-color: #252565;
+            z-index: 1000;
+        }
+
+        nav .left {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: #9999e2;
+        }
+
+        /* Adding margin-top to avoid overlap with fixed nav */
+        main {
+            padding: 80px 5%;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .leftSection {
+            width: 100%;
+        }
+
+        .leftSection h1 {
+            font-size: 2.5rem;
+        }
+
+        .leftSection .highlight {
+            color: #aa6be4;
+        }
+
+        .section-title {
+            color: #9999e2;
+            margin-bottom: 20px;
+        }
+
+        .experience,
+        .education,
+        .projects,
+        .skills {
+            margin-bottom: 50px;
+        }
+
+        .education-item,
+        .experience-item,
+        .project-item,
+        .skill-item {
+            margin-bottom: 20px;
+        }
+
+        .education-item span,
+        .experience-item span,
+        .skill-item span {
+            display: block;
+            color: gray;
+        }
+
+        footer {
+            background-color: #252565;
+            color: #9999e2;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: #9999e2;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        /* Line to separate sections */
+        hr {
+            border: 0;
+            height: 1px;
+            background: #9999e2;
+            margin: 50px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Pradeep Sai Lakshman</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="firstSection">
+            <div class="leftSection">
+                <h1>Hi, I’m <span class="highlight">Pradeep Sai Lakshman</span></h1>
+                <p>I am currently pursuing my Bachelor of Technology in Electronics and Communication Engineering at
+                    Prasad V. Potluri Siddhartha Institute of Technology. I’m passionate about technology and always
+                    eager to learn and grow both personally and professionally.</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="experience">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="experience">
+                <div class="experience-item">
+                    <h3>MathWorks Virtual Internship Program</h3>
+                    <span>May 2023 - Sep 2023</span>
+                    <p>Get Started with Artificial Intelligence.</p>
+                </div>
+                <div class="experience-item">
+                    <h3>BrainOvision - Java Full Stack Internship</h3>
+                    <span>Sep 2023 - Oct 2023</span>
+                </div>
+                <div class="experience-item">
+                    <h3>Doordarshan - Short-Term Training</h3>
+                    <span>Jun 2023 - Jul 2023</span>
+                </div>
+                <div class="experience-item">
+                    <h3>Sense Semiconductor & IT Solutions Pvt. Ltd</h3>
+                    <span>May 2024 - Jun 2024</span>
+                    <p>Advanced Digital VLSI Using FPGA Internship.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="education">
+            <h2 class="section-title">Education</h2>
+            <div class="education">
+                <div class="education-item">
+                    <h3>Bachelor of Technology in Electronics and Communication Engineering</h3>
+                    <span>2021 - Present | Prasad V. Potluri Siddhartha Institute of Technology</span>
+                    <span>CGPA: 80%</span>
+                </div>
+                <div class="education-item">
+                    <h3>Intermediate</h3>
+                    <span>2019 - 2021 | Sri Sarada Junior College, Vijayawada</span>
+                    <span>Percentage: 95%</span>
+                </div>
+                <div class="education-item">
+                    <h3>10th Standard</h3>
+                    <span>2018 - 2019 | Narayana High School, Vijayawada</span>
+                    <span>Percentage: 95%</span>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="projects">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects">
+                <div class="project-item">
+                    <h3>Name Printing on 7-Segment Display Using Basys3 FPGA Board</h3>
+                    <p>Developed a hardware project to display names on a 7-segment display using Verilog HDL on the
+                        Basys3 FPGA board.</p>
+                </div>
+                <div class="project-item">
+                    <h3>Creating Digital Clock Using Basys3 FPGA Board</h3>
+                    <p>Implemented a digital clock with real-time display using Verilog HDL on the Basys3 FPGA board.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="skills">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills">
+                <div class="skill-item">
+                    <h3>Programming Languages:</h3>
+                    <span>C, Java, Python</span>
+                </div>
+                <div class="skill-item">
+                    <h3>Software Tools:</h3>
+                    <span>MATLAB, Xilinx Vivado, ModelSim</span>
+                </div>
+                <div class="skill-item">
+                    <h3>Key Skills:</h3>
+                    <span>Communication, Logical Thinking, Teamwork, Creativity, Problem-Solving</span>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="contact">
+            <h2 class="section-title">Contact Me</h2>
+            <p>Email: <a href="mailto:pradeepsailakshman.guni@gmail.com">pradeepsailakshman.guni@gmail.com</a></p>
+            <p>Phone: +91 9392485616</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pradeep Sai Lakshman. All rights reserved.</p>
+        <p>Connect with me on <a href="https://www.linkedin.com/in/pradeep-sai-lakshman-guniganti"
+                target="_blank">LinkedIn</a></p>
+    </footer>
+</body>
+
+</html>
