@@ -57,19 +57,62 @@
             color: #9999e2;
         }
 
+        /* Styling the hamburger menu */
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+        }
+
+        .menu-icon span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            margin: 6px;
+            background-color: white;
+        }
+
         /* Adjusting main content to avoid overlap with fixed nav */
         main {
             padding: 80px 5%;
         }
 
-        /* Remove flex display since we don't need side-by-side alignment */
-        .firstSection {
-            margin-bottom: 60px;
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            nav ul {
+                position: fixed;
+                top: 80px;
+                right: 0;
+                background-color: #252565;
+                height: 100vh;
+                width: 200px;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transform: translateX(100%);
+                transition: transform 0.3s ease;
+            }
+
+            nav ul.active {
+                transform: translateX(0);
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            /* Hide the full menu and only show the hamburger icon */
+            nav ul {
+                display: none;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
         }
 
-        .leftSection {
-            /* Remove width restriction */
-            /* width: 50%; */
+        /* Styling the about section */
+        .firstSection {
+            margin-bottom: 60px;
         }
 
         .leftSection h1 {
@@ -140,13 +183,18 @@
     <header>
         <nav>
             <div class="left">Pradeep Sai Lakshman</div>
-            <ul>
+            <ul id="nav-menu">
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
@@ -246,6 +294,13 @@
         <p>&copy; 2024 Pradeep Sai Lakshman. All rights reserved.</p>
         <p>Connect with me on <a href="https://www.linkedin.com/in/pradeep-sai-lakshman-guniganti" target="_blank">LinkedIn</a></p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('active');
+        }
+    </script>
 </body>
 
 </html>
