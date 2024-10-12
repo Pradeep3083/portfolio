@@ -18,6 +18,8 @@
             font-family: monospace;
             line-height: 1.6;
         }
+
+        /* Fixing the navigation bar at the top */
         nav {
             position: fixed;
             top: 0;
@@ -32,10 +34,27 @@
             height: 80px;
         }
 
-        nav .left {
-            font-size: 1.5rem;
-            font-weight: bold;
+        .logo{
+            height: 70px;
+            transition: opacity 0.3s ease-in-out;
         }
+
+        .img1{
+            display: block;
+        }
+
+        .img2{
+            display: none;
+        }
+
+        .left-logo:hover .img1{
+            display: none;
+        }
+
+        .left-logo:hover .img2{
+            display: block;
+        }
+
 
         nav ul {
             display: flex;
@@ -54,6 +73,8 @@
         nav ul li a:hover {
             color: #9999e2;
         }
+
+        /* Styling the hamburger menu */
         .menu-icon {
             display: none;
             cursor: pointer;
@@ -66,6 +87,8 @@
             margin: 6px;
             background-color: white;
         }
+
+        /* Adjusting main content to avoid overlap with fixed nav */
         main {
             padding: 80px 5%;
         }
@@ -93,6 +116,8 @@
             .menu-icon {
                 display: block;
             }
+
+            /* Hide the full menu and only show the hamburger icon */
             nav ul {
                 display: none;
             }
@@ -101,6 +126,8 @@
                 display: flex;
             }
         }
+
+        /* Styling the about section */
         .firstSection {
             margin-bottom: 60px;
         }
@@ -112,6 +139,8 @@
         .leftSection .highlight {
             color: #aa6be4;
         }
+
+        /* Section scroll offset to avoid headings being covered by the navbar */
         section {
             scroll-margin-top: 80px;
         }
@@ -158,10 +187,13 @@
         footer a:hover {
             color: white;
         }
+
+        /* Optional: Add line separators between sections */
         section+section {
             border-top: 1px solid #9999e2;
             padding-top: 40px;
         }
+
         .email{
             color: white;
             text-decoration: none;
@@ -172,7 +204,10 @@
 <body>
     <header>
         <nav>
-            <div class="left">Pradeep Sai Lakshman</div>
+            <div class="left-logo">
+                <img src="LOGO1.png" alt="Logo 1" class="logo img1">
+                <img src="LOGO2.png" alt="Logo 2" class="logo img2">
+            </div>
             <ul id="nav-menu">
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
