@@ -4,6 +4,261 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pradeep Sai Lakshman Guniganti - Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000021;
+            color: white;
+            font-family: monospace;
+            line-height: 1.6;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5%;
+            background-color: #252565;
+            z-index: 1000;
+            height: 80px;
+        }
+
+        .logo {
+            height: 70px;
+        }
+
+        .img1 { display: block; }
+        .img2 { display: none; }
+
+        .left-logo:hover .img1 { display: none; }
+        .left-logo:hover .img2 { display: block; }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: #9999e2;
+        }
+
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+        }
+
+        .menu-icon span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            margin: 6px;
+            background-color: white;
+        }
+
+        main {
+            padding: 80px 5%;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                position: fixed;
+                top: 80px;
+                right: 0;
+                background-color: #252565;
+                height: 100vh;
+                width: 200px;
+                flex-direction: column;
+                justify-content: center;
+                display: none;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+        }
+
+        section {
+            scroll-margin-top: 80px;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            color: #9999e2;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            color: #aa6be4;
+        }
+
+        footer {
+            background-color: #252565;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .contact-details {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="left-logo">
+            <img src="LOGO1.png" class="logo img1">
+            <img src="LOGO2.png" class="logo img2">
+        </div>
+
+        <ul id="nav-menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="menu-icon" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+</header>
+
+<main>
+
+<section id="about">
+    <h1>Hi, I’m <span class="highlight">Pradeep Sai Lakshman Guniganti</span></h1>
+    <p>
+        I am a <b>B.Tech (ECE) graduate – 2025</b> from Prasad V. Potluri Siddhartha Institute of Technology.
+        I am a passionate <b>Java Full Stack Developer</b> with hands-on experience in building
+        web applications using Java, Spring Boot, SQL, HTML, CSS, and JavaScript.
+        I enjoy problem-solving, clean coding, and continuous learning.
+    </p>
+</section>
+
+<section id="experience">
+    <h2 class="section-title">Work Experience</h2>
+
+    <h3>Java Full Stack Intern – BrainOvision</h3>
+    <span>Sep 2023 – Oct 2023 | Completed</span>
+    <p>Worked on Java, Spring Boot, REST APIs, MySQL, and frontend technologies.</p>
+
+    <h3>MathWorks Virtual Internship</h3>
+    <span>May 2023 – Sep 2023 | Completed</span>
+    <p>Hands-on exposure to Artificial Intelligence concepts using MATLAB.</p>
+
+    <h3>Doordarshan – Short-Term Training</h3>
+    <span>Jun 2023 – Jul 2023 | Completed</span>
+    <p>Explored real-world broadcasting technologies and communication systems.</p>
+
+    <h3>Sense Semiconductor & IT Solutions Pvt. Ltd</h3>
+    <span>May 2024 – Jun 2024 | Completed</span>
+    <p>Advanced Digital VLSI using FPGA with hands-on implementation.</p>
+</section>
+
+<section id="education">
+    <h2 class="section-title">Education</h2>
+
+    <h3>B.Tech – Electronics & Communication Engineering</h3>
+    <span>2021 – 2025 | PVPSIT, Vijayawada</span>
+    <span>CGPA: 8.0</span>
+
+    <h3>Intermediate</h3>
+    <span>2019 – 2021 | Sri Sarada Junior College</span>
+    <span>Percentage: 95%</span>
+
+    <h3>SSC</h3>
+    <span>2018 – 2019 | Narayana High School</span>
+    <span>Percentage: 95%</span>
+</section>
+
+<section id="projects">
+    <h2 class="section-title">Projects</h2>
+
+    <h3>College Grievance Tracker (Java Full Stack)</h3>
+    <p>
+        A web-based grievance management system built using Java, Spring Boot,
+        MySQL, HTML, CSS, and JavaScript with authentication and role-based access.
+    </p>
+
+    <h3>Digital Clock using Basys3 FPGA</h3>
+    <p>Designed and implemented a real-time digital clock using Verilog HDL.</p>
+
+    <h3>Name Display on 7-Segment using FPGA</h3>
+    <p>Displayed custom names on a 7-segment display using Verilog HDL.</p>
+</section>
+
+<section id="skills">
+    <h2 class="section-title">Skills</h2>
+
+    <p><b>Programming:</b> Java, C, Python</p>
+    <p><b>Web:</b> HTML, CSS, JavaScript</p>
+    <p><b>Backend:</b> Spring Boot, REST APIs</p>
+    <p><b>Database:</b> MySQL</p>
+    <p><b>Tools:</b> Git, MATLAB, Xilinx Vivado</p>
+    <p><b>Core Skills:</b> Problem Solving, Debugging, Teamwork, Communication</p>
+</section>
+
+<section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <p>Email: <a class="contact-details" href="mailto:pradeepsailakshman.guni@gmail.com">pradeepsailakshman.guni@gmail.com</a></p>
+    <p>LinkedIn: <a class="contact-details" href="https://www.linkedin.com/in/pradeep-sai-lakshman-guniganti">Pradeep Sai Lakshman Guniganti</a></p>
+    <p>GitHub: <a class="contact-details" href="https://github.com/Pradeep3083">Pradeep3083</a></p>
+    <p>Phone: +91 9392485616</p>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2025 Pradeep Sai Lakshman Guniganti</p>
+</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("nav-menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pradeep Sai Lakshman - Portfolio</title>
     <style>
         * {
@@ -332,3 +587,5 @@
 </body>
 
 </html>
+
+-->
